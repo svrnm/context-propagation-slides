@@ -1,0 +1,7 @@
+node_modules
+dist
+.slidev
+*.local
+video/.frames
+video
+.DS_Store

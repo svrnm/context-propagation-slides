@@ -1,0 +1,112 @@
+/* Look & feel borrowed from opentelemetry.io: blue #4f61ab, amber #f5a700, navy hero, system fonts */
+:root {
+  --otel-blue: #4f61ab;
+  --otel-blue-light: #95a0cd;
+  --otel-navy: #1e2a5a;
+  --otel-orange: #f5a700;
+  --otel-orange-dark: #b57a00;
+  --otel-ink: #212529;
+  --otel-grey: #6c757d;
+  --otel-paper: #f8f9fa;
+  --slidev-theme-primary: var(--otel-blue);
+}
+
+.slidev-layout {
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--otel-ink);
+  background: #fff;
+  padding: 2.25rem 3.25rem 3rem;
+}
+
+.slidev-layout h1 {
+  color: var(--otel-navy);
+  font-weight: 750;
+  font-size: 2.15rem;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.4rem;
+  position: relative;
+}
+.slidev-layout h1::after {
+  content: '';
+  display: block;
+  width: 3.5rem;
+  height: 4px;
+  margin-top: 0.45rem;
+  border-radius: 2px;
+  background: var(--otel-orange);
+}
+.slidev-layout h1 + p {
+  opacity: 1;
+  color: var(--otel-grey);
+  margin-top: -0.6rem;
+}
+.slidev-layout h3 {
+  color: var(--otel-blue);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+.slidev-layout strong { color: var(--otel-navy); }
+.slidev-layout a { color: var(--otel-blue); border-bottom: 1px dashed var(--otel-blue-light); }
+.slidev-layout li { margin: 0.25rem 0; }
+.slidev-layout ul li::marker { color: var(--otel-orange); }
+.slidev-layout :not(pre) > code {
+  font-size: 0.85em;
+  color: var(--otel-navy);
+  background: #eef0f8;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+.slidev-layout pre.shiki { border: 1px solid #e3e6f0; border-radius: 8px; background: var(--otel-paper) !important; }
+.slidev-layout table { font-size: 0.9rem; }
+.slidev-layout th { color: var(--otel-blue); border-bottom: 2px solid var(--otel-orange); }
+
+/* dark (hero) slides */
+.otel-dark {
+  color: #fff;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.08) 1px, transparent 0) 0 0 / 22px 22px,
+    radial-gradient(ellipse at 85% 110%, rgba(245, 167, 0, 0.22), transparent 55%),
+    linear-gradient(135deg, #172150 0%, #26346e 55%, #4f61ab 130%);
+}
+.otel-dark h1, .otel-dark h2, .otel-dark strong { color: #fff; }
+.otel-dark p { color: rgba(255, 255, 255, 0.82); }
+
+.otel-cover { display: flex; flex-direction: column; padding: 2.5rem 3.5rem; }
+.otel-cover__logo { height: 2.6rem; align-self: flex-start; }
+.otel-cover__grid { flex: 1; display: grid; grid-template-columns: 1.05fr 1fr; gap: 2rem; align-items: center; }
+.otel-cover h1 { font-size: 3.6rem; line-height: 1.05; margin-bottom: 1.2rem; }
+.otel-cover h1::after { width: 5rem; height: 5px; margin-top: 1rem; }
+.otel-cover p { font-size: 1.25rem; line-height: 1.5; }
+.otel-cover__art { height: 21rem; }
+
+.otel-section { display: grid; place-items: center; text-align: center; }
+.otel-section h1 { font-size: 3rem; }
+.otel-section h1::after { margin: 0.9rem auto 0; }
+.otel-section .eyebrow { color: var(--otel-orange); text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; font-size: 0.9rem; margin-bottom: 0.6rem; }
+
+/* footer */
+.otel-footer {
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 10;
+  display: flex; align-items: center; gap: 0.6rem;
+  padding: 0.6rem 3.25rem 0.75rem;
+  font-size: 0.72rem; color: var(--otel-grey);
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+.otel-footer--dark { color: rgba(255, 255, 255, 0.6); }
+
+/* reusable bits */
+.callout {
+  border-left: 4px solid var(--otel-orange);
+  background: #fff8e6;
+  padding: 0.6rem 1rem;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.95rem;
+}
+.callout.blue { border-color: var(--otel-blue); background: #eef0f8; }
+.big-quote { font-size: 1.9rem; line-height: 1.35; font-weight: 650; color: var(--otel-navy); }
+.big-quote em { font-style: normal; color: var(--otel-orange-dark); }
+.scene-caption { color: var(--otel-grey); font-size: 0.95rem; margin-top: 0.4rem; }
+.otel-dark h1 + p { color: rgba(255, 255, 255, 0.78); }
+.callout p { margin: 0; }
+.code-sm { --slidev-code-font-size: 11px; --slidev-code-line-height: 17px; }

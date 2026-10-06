@@ -1,0 +1,20 @@
+{
+  "name": "context-propagation",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "slidev --open",
+    "build": "slidev build",
+    "export": "slidev export",
+    "video": "node scripts/record-video.mjs"
+  },
+  "dependencies": {
+    "@slidev/cli": "^53.0.0",
+    "@slidev/theme-default": "^0.25.0",
+    "roughjs": "^4.6.6",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
