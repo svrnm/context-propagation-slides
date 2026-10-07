@@ -110,3 +110,9 @@
 .otel-dark h1 + p { color: rgba(255, 255, 255, 0.78); }
 .callout p { margin: 0; }
 .code-sm { --slidev-code-font-size: 11px; --slidev-code-line-height: 17px; }
+
+/* Embedded in an iframe (see setup/main.ts): keep the nav controls visible so
+   readers see the deck is clickable. Slidev otherwise only shows them on hover. */
+html.in-iframe div:has(> nav) {
+  opacity: 1 !important;
+}
